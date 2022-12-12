@@ -26,3 +26,7 @@ Content-Type: application/json
 ### Log out user
 
 GET http://localhost:3000/api/user/logout
+
+### Get all tags
+
+GET http://localhost:3000/api/tag/getall
