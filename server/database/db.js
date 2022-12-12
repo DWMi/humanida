@@ -28,17 +28,6 @@ export const selectFrom = async (table, ref, value) => {
   }
 };
 
-export const selectFromSingleJoin = async (table, ref, value, join) => {
-  try {
-    const [rows, fields] = await con.query(
-      `SELECT * FROM ${table} INNER JOIN ${join} ON ${table}.ID = ${join}.${table}_ID AND ${table}.${ref} = ${value}`
-    );
-    return rows;
-  } catch (err) {
-    throw new Error(err);
-  }
-};
-
 export const insert = async (table, tableValues, newValues) => {
   try {
     const [rows, fields] = await con.query(

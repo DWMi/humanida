@@ -30,3 +30,7 @@ GET http://localhost:3000/api/user/logout
 ### Get all tags
 
 GET http://localhost:3000/api/tag/getall
+
+### Get users connected to tags
+
+GET http://localhost:3000/api/tag/getusers?id=1
