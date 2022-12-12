@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieSession from "cookie-session";
+import { router as userRouter } from "./receivers/userReceiver.js";
 
 const app = express();
 const port = 3000;
@@ -19,6 +20,8 @@ app.use(
     secure: false,
   })
 );
+
+app.use("/api/user", userRouter);
 
 app.listen(port, () => {
   console.log("Server is running on port: " + port);

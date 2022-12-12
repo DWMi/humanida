@@ -1,0 +1,28 @@
+
+
+### REGISTER USER
+
+POST http://localhost:3000/api/user/registeruser
+Content-Type: application/json
+
+{
+  "name": "Hugo",
+  "email": "hugo@hello.se",
+  "description": "lorem ipsum osv...",
+  "password": "123"
+}
+
+
+### LOG IN USER
+
+POST http://localhost:3000/api/user/login
+Content-Type: application/json
+
+{
+  "email": "hugo@hello.se",
+  "password": "123"
+}
+
+### Log out user
+
+GET http://localhost:3000/api/user/logout

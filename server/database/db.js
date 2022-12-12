@@ -12,6 +12,7 @@ export const getAll = async (table) => {
     const [rows, fields] = await con.query(`SELECT * FROM ${table}`);
     return rows;
   } catch (err) {
+    console.log(err);
     throw new Error();
   }
 };
