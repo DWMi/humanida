@@ -1,4 +1,5 @@
 import { Route, Routes } from "react-router"
+import Startsida from "./Startsida"
 
 
 const ContentContainer =()=>{
@@ -7,7 +8,7 @@ const ContentContainer =()=>{
         <Routes>
             <Route
                 path="/"
-                element={<h1> Start Sida </h1>}
+                element={<Startsida/>}
             />
             <Route
                 path="/kompetens/:id"
