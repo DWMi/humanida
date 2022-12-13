@@ -1,0 +1,39 @@
+
+
+.ladningCon{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.tagCon{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap:50px;
+        flex-wrap: wrap;
+        padding: 30px;
+        max-width: 60vw;
+
+    }
+
+.tagBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    min-height: 82px;
+    color: white;
+    background: rgb(11,48,77);
+    background: linear-gradient(0deg, rgba(99,138,168,1) 0%, rgba(11,48,77,1) 100%);
+}
+
+.textCon{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    padding-left: 100px;
+    padding-top:40px;
+    padding-bottom: 40px;
+}

@@ -5,7 +5,7 @@ const Hero =(props)=>{
 
     return (
 
-        <div>
+        <div className="textCon">
             <h1 >
                 {props.titel}
             </h1>
