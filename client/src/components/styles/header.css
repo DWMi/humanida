@@ -1,0 +1,18 @@
+.header{
+    width: 100%;
+    display:flex; 
+    justify-content: space-between;
+
+}
+
+.headerCon{
+    width: 100%;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    background-color: #294f6d;
+}
+.iconCon{
+
+    padding-right: 10px;
+}
