@@ -34,3 +34,8 @@ GET http://localhost:3000/api/tag/getall
 ### Get users connected to tags
 
 GET http://localhost:3000/api/tag/getusers?id=1
+
+
+### Get tags not connected to user
+
+GET http://localhost:3000/api/tag/getnotconnected?id=1

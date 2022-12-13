@@ -19,3 +19,17 @@ export const getUsers = async (req, res) => {
     res.status(500);
   }
 };
+
+export const getNotConnected = async (req, res) => {
+  try {
+    const tags = await freeQuery(
+      `SELECT ID, name FROM tag RIGHT JOIN user_tag ON user_tag.tag_ID != tag.ID AND user_tag.user_ID = ${req.query.id}`
+    );
+    res.status(200).json(tags);
+  } catch (err) {
+    res.status(500);
+  }
+};
+
+//SELECT name, ID FROM tag LEFT JOIN user_tag ON user_tag.user_ID <> 1
+// SELECT ID, name FROM `tag` RIGHT JOIN user_tag ON user_tag.tag_ID != tag.ID AND user_tag.user_ID = 1
