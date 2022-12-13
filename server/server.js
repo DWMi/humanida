@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieSession from "cookie-session";
 import { router as userRouter } from "./receivers/userReceiver.js";
 import { router as tagRouter } from "./receivers/tagReceiver.js";
+import { router as emailRouter } from "./receivers/emailReceiver.js";
 
 const app = express();
 const port = 3000;
@@ -24,6 +25,7 @@ app.use(
 
 app.use("/api/user", userRouter);
 app.use("/api/tag", tagRouter);
+app.use("/api/email", emailRouter);
 
 app.listen(port, () => {
   console.log("Server is running on port: " + port);
