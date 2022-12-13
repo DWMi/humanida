@@ -1,0 +1,52 @@
+
+
+### REGISTER USER
+
+POST http://localhost:3000/api/user/registeruser
+Content-Type: application/json
+
+{
+  "name": "Hugo",
+  "email": "hugo@hello.se",
+  "description": "lorem ipsum osv...",
+  "password": "123"
+}
+
+
+### LOG IN USER
+
+POST http://localhost:3000/api/user/login
+Content-Type: application/json
+
+{
+  "email": "hugo@hello.se",
+  "password": "123"
+}
+
+### Log out user
+
+GET http://localhost:3000/api/user/logout
+
+### Get all tags
+
+GET http://localhost:3000/api/tag/getall
+
+### Get users connected to tags
+
+GET http://localhost:3000/api/tag/getusers?id=1
+
+
+### Get tags not connected to user
+
+GET http://localhost:3000/api/tag/getnotconnected?id=1
+
+### Save new email
+
+POST http://localhost:3000/api/email/save
+Content-Type: application/json
+
+{
+  "name": "Hugo",
+  "email": "hugo@hello.se",
+  "content": "hello world"
+}
