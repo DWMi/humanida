@@ -23,7 +23,7 @@ const Startsida =()=>{
                 text='Här hittar du enkelt utvecklare efter den kompetens som du söker.'
             />
             <div className="ladningCon">
-            <h3 style={{display:'flex', alignItems:'start', width:'50vw', padding:'30px 0px'}}> Kompetenser: </h3>
+            <h3 style={{display:'flex', alignItems:'start', textAlign:'start' , width:'100%', padding:'30px 0px'}}> Kompetenser: </h3>
                 <div className='tagCon'>
                     {tags ? <Tags tags={tags}/> : undefined}
                 </div>

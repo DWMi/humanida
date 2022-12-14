@@ -1,10 +1,10 @@
-
+import './styles/tags.css'
 
 
 const Tags =(props)=>{
 
     return(
-    
+
         props.tags.map((tag)=>{
         return(
         
