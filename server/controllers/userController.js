@@ -56,3 +56,11 @@ export const logOutUser = (req, res) => {
     res.status(404).json("Någonting gick fel.");
   }
 };
+
+export const validateUser = (req, res) => {
+  if (req.session.loggedInUser) {
+    res.status(200).json(req.session.loggedInUser);
+  } else {
+    res.status(404).json("Ingen användare inloggad");
+  }
+};
