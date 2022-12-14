@@ -1,16 +1,20 @@
-
+import './styles/tags.css'
 
 
 const Tags =(props)=>{
 
     return(
-       props.tags.map((tag)=>{
+
+        props.tags.map((tag)=>{
         return(
-            <div>
+        
+            <div className="tagBox">
                 {tag.name}
             </div>
+            
         )
-       })
+        })
+
     )
 }
 

@@ -8,15 +8,12 @@ export default function Footer() {
    
     <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
         
-    <div class="kontakta link">
-      <a href="/">
-        <h3>Kontakta oss</h3>
+    <div className="kontakta-link">
+      <a className='contact' href="/">
+        Kontakta oss
       </a>
     </div>
-          © 2022 Copyright:
-        <a className='text-reset ' >
-        HUMANIDA
-        </a>
+          Copyright © 2022 HUMANIDA
       </div> 
       </footer>
   )

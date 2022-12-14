@@ -4,19 +4,21 @@ import './styles/header.css'
 
 
 const Header=()=>{
+ 
 
     return(
         <header className="header" >
         <div className='headerCon'>
-
             <div className='logo' >
-                <img src={LOGO} alt='just a logo'/>
+                <img src={LOGO} alt='just a logo'  
+                    className='icon'
+                    onClick={()=>window.location.href="/"}/>
             </div>
             <div className='iconCon'>
                 <HiUserCircle 
+                className='avatar'
                 size={30}
                 color={'#A2B8C8'}
-                    className='icon'
                 />
             </div>
         </div>
