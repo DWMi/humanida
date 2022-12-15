@@ -1,15 +1,15 @@
-
+import './styles/hero.css'
 
 
 const Hero =(props)=>{
 
     return (
 
-        <div>
-            <h1 >
+        <div className="textCon">
+            <h1 style={{padding:10}} >
                 {props.titel}
             </h1>
-            <p> 
+            <p style={{padding:10}} > 
                 {props.text}
             </p>
         </div>

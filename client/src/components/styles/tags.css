@@ -1,0 +1,12 @@
+
+
+.tagBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 145px;
+    min-height: 82px;
+    color: white;
+    background: rgb(11,48,77);
+    background: linear-gradient(0deg, rgba(99,138,168,1) 0%, rgba(11,48,77,1) 100%);
+}

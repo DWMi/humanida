@@ -11,8 +11,14 @@ const Header = () => {
     <header className="header">
       <div className="headerCon">
         <div className="logo">
-          <img src={LOGO} alt="just a logo" />
+          <img
+            src={LOGO}
+            alt="just a logo"
+            className="icon"
+            onClick={() => (window.location.href = "/")}
+          />
         </div>
+
         <div className="iconCon">
           <a href={getUser ? `/min-sida/${getUser.ID}` : "/login"}>
             <HiUserCircle size={30} color={"#A2B8C8"} className="icon" />

@@ -4,10 +4,13 @@ import Header from "./Header";
 
 const Layout = () => {
   return (
-    <div>
+    <div
+      className="container"
+      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+    >
       <Header />
       <ContentContainer />
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 };
