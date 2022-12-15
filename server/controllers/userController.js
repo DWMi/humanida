@@ -1,4 +1,4 @@
-import { insert, selectFrom } from "../database/db.js";
+import { freeQuery, insert, selectFrom } from "../database/db.js";
 
 export const userDBValues = "name, email, description, password";
 
@@ -62,5 +62,26 @@ export const validateUser = (req, res) => {
     res.status(200).json(req.session.loggedInUser);
   } else {
     res.status(404).json("Ingen användare inloggad");
+  }
+};
+
+export const getTags = async (req, res) => {
+  try {
+    let tags = await freeQuery(
+      `SELECT ID, name FROM tag RIGHT JOIN user_tag ON user_tag.tag_ID = tag.ID AND user_tag.user_ID = ${req.query.id}`
+    );
+    res.status(200).json(tags);
+  } catch (err) {
+    res.status(500);
+  }
+};
+
+export const addTag = async (req, res) => {
+  try {
+    let values = [[req.body.user_ID, req.body.tag_ID]];
+    let post = await insert("user_tag", "user_ID, tag_ID", values);
+    res.status(200).json("Taggen är tillagd på användaren");
+  } catch (err) {
+    res.status(500);
   }
 };
