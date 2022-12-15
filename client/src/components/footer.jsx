@@ -7,7 +7,7 @@ export default function Footer() {
     <footer> 
    
     <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
-        
+   
     <div className="kontakta-link">
       <a className='contact' href="/">
         Kontakta oss

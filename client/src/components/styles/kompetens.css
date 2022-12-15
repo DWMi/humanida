@@ -1,0 +1,44 @@
+
+
+p{
+    text-align: center;
+}
+.mantine-Paper-root {
+
+border: 2px solid rgb(15, 11, 11);
+width: 320px;
+height: 220px;
+border-radius: 10px;
+margin-bottom: 20px;
+
+
+}
+
+
+.mantine-i2fjw4[data-first] {
+
+    border-top: 0;
+}
+
+
+
+.mantine-i2fjw4 {
+    display: block;
+    margin-left: 90px;
+
+ 
+} 
+.mantine-1snbilv {
+    height: 100px;
+    width: 100px;
+    margin-bottom: 30px;
+    
+}    
+.landingCon{
+ 
+        display: flex;
+        align-items: center;
+         gap:50px;
+        max-width: 50vw;
+    flex-wrap: wrap;
+}
