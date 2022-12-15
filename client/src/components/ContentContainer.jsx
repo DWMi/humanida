@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router"
 import Kompetens from "./Kompetens"
+import Profil from "./profil"
 import Startsida from "./Startsida"
 
 
@@ -17,7 +18,7 @@ const ContentContainer =()=>{
             />
             <Route
                 path="/profil/:id"
-                element={<h1> Min Profil </h1>}
+                element={<Profil/>}
             />
             <Route
                 path="/kontakt"
