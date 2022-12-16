@@ -1,5 +1,7 @@
 import express from "express";
 import {
+  addTag,
+  getTags,
   logInUser,
   logOutUser,
   registerUser,
@@ -15,3 +17,7 @@ router.post("/login", logInUser);
 router.get("/logout", logOutUser);
 
 router.get("/validate", validateUser);
+
+router.get("/gettags", getTags);
+
+router.post("/addtag", addTag);
