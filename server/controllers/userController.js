@@ -19,7 +19,6 @@ export const registerUser = async (req, res) => {
 export const logInUser = async (req, res) => {
   try {
     let response = await selectFrom("user", "email", req.body.email);
-
     if (response.length === 1) {
       // Matching password, setting loggedInUser to session.
       if (
@@ -35,12 +34,11 @@ export const logInUser = async (req, res) => {
         res.status(200).json(req.session.loggedInUser);
         return;
       }
-      throw new Error("En användare är redan inloggad");
+      throw new Error("Fel användarnamn eller lösenord");
     } else {
       throw new Error("Fel användarnamn eller lösenord");
     }
   } catch (err) {
-    console.log(err);
     res.status(400).json(err.message);
   }
 };
