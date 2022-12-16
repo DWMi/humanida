@@ -85,3 +85,17 @@ export const addTag = async (req, res) => {
     res.status(500);
   }
 };
+
+export const getUserById = async (req,res )=>{
+
+  try{
+
+    let user = await selectFrom('user', 'ID', req.query.id)
+    res.status(200).json(user)
+
+  }catch(err){
+    res.status(500)
+  }
+
+
+}

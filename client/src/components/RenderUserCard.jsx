@@ -8,7 +8,7 @@ const RenderUserCard = (props) => {
         {props.user.map((user)=>{
             return (
             <Card
-    >
+    key={user.ID}>
       <Card.Section>
      
           <Avatar

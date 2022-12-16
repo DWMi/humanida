@@ -73,3 +73,7 @@ Content-Type: application/json
   "email": "hugo@hello.se",
   "content": "hello world"
 }
+
+### get user by id
+
+GET http://localhost:3000/api/user/getbyid?id=1
