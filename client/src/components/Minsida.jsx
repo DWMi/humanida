@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { makeRequest } from "../functions/makeRequest";
 import Hero from "./Hero";
 import Tags from "./Tags";
-import "./styles/landing.css";
+import "./styles/minsida.css";
 import { useParams } from "react-router-dom";
 import RenderUserCard from "./RenderUserCard";
 
@@ -39,36 +39,31 @@ const Minsida = () => {
   console.log(selectedTag)
   return (
     <>
-      <Hero titel="" text="" />
-      <div className="ladningCon">
-        <h3
-          style={{
-              display: "flex",
-              alignItems: "start",
-              textAlign: "start",
-              width: "100%",
-              padding: "30px 0px",
+      <div className="minContainer">
+        <div className="selectContainer">
+        <h3>Lägg till kompetens: </h3>
+          <select
+            onChange={(event) => {
+              setSelectedTags(event.target.value);
             }}
-            >
-          {" "}
-          Lägg till kompetens:{" "}
-        </h3>
-        <select onChange={(event)=>{
-            setSelectedTags(event.target.value)}} id="framework">
-          {notConnectedTags.length > 0
-            ? notConnectedTags.map((tag) => {
-                return (
+            id="framework"
+          >
+            {notConnectedTags.length > 0
+              ? notConnectedTags.map((tag) => {
+                  return (
                     <option key={tag.ID} value={tag.ID}>
-                    {tag.name}
-                  </option>
-                );
-            })
-            : undefined}
-        </select>
-        <button onClick={saveTag}>Lägg till kompetens</button>
+                      {tag.name}
+                    </option>
+                  );
+                })
+              : undefined}
+          </select>
+          <button onClick={saveTag}>Lägg till kompetens</button>
+        </div>
+        <div className="tagContainer">
+          {connectedTags.length > 0 ? <Tags tags={connectedTags} /> : undefined}
+        </div>
       </div>
-      <div>{connectedTags.length > 0 ? <Tags tags={connectedTags} /> : undefined}</div>
-
     </>
   );
 };
