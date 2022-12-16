@@ -34,7 +34,7 @@ const Profil =()=>{
         </div>
             
           
-            <div className='tagCon' >            
+            <div className='tagCon' style={{MaxWidth:'100%'}} >            
              {connectedTags.length > 0 ? <Tags tags={connectedTags}  /> : undefined}
             </div>
              

@@ -3,30 +3,35 @@
 
 .minContainer {
     width: 100%;
-    height:100vh;
+    height:100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-around;
-    
+    justify-content: flex-end;
+    padding-top:100px;
 }
 
-.tagContainer {
-    align-self: flex-end;
- 
+.tagContainer {    
+    align-items: center;
+    justify-content: center;
     gap: 50px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    padding: 30px;
+    
 }
 
-.kompContainer {
+.selectContainer {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    left: 10%;
+}
+.selectBox{
     display: flex;
-    align-items: flex-start;
-    margin: 25px 0px 25px 0px;
-}
-
-.selectCon {
-   display: flex; 
-    width:100%;
+    gap:20px;
 }

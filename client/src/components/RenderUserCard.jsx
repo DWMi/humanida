@@ -7,7 +7,8 @@ const RenderUserCard = (props) => {
     <>
       {props.user.map((user) => {
         return (
-          <Card key={user.ID} style={{display:'flex', padding:'20px', flexDirection:'column', textAlign: "center" , justifyContent:'space-around'}}>
+          <Card key={user.ID} style={{display:'flex', padding:'30px', flexDirection:'column', textAlign: "center" , justifyContent:'space-around',
+          width:'230px', height:'160px', border:'solid 1px'}}>
             <Card.Section>
               {/* <Avatar
                 component="a"
@@ -17,7 +18,7 @@ const RenderUserCard = (props) => {
                 
               /> */}
               <div className='avatarCon'>
-                <a href={"/profil/"+ user.ID}>
+                <a href={"/profil/"+ user.ID} style={{textDecoration:'none', color:'inherit'}}>
                   <HiUserCircle style={{width:'80px', height:'80px', margin:'20px'}}/>  
                 </a>
               </div>

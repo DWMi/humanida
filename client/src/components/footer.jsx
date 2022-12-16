@@ -1,3 +1,4 @@
+import { Flex } from "@mantine/core";
 import React from "react";
 import "./styles/footer.css";
 
