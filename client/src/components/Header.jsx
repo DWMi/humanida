@@ -21,7 +21,11 @@ const Header = () => {
 
         <div className="iconCon">
           <a href={getUser ? `/min-sida/${getUser.ID}` : "/login"}>
-            <HiUserCircle size={30} color={"#A2B8C8"} className="icon" />
+            <HiUserCircle
+              size={30}
+              color={getUser ? "green" : "#A2B8C8"}
+              className="icon"
+            />
           </a>
         </div>
       </div>
