@@ -14,24 +14,32 @@ margin-bottom: 20px;
 
 }
 
+.mantine-Card-cardSection{
 
+    width: 100%;
+    margin: 0;
+}
 .mantine-i2fjw4[data-first] {
 
     border-top: 0;
 }
 
+.mantine-Avatar-placeholder{
+    display: flex;
 
+    justify-content: center;
+    align-items: center;
+}
 
 .mantine-i2fjw4 {
-    display: block;
-    margin-left: 90px;
+    display: flex;
+    justify-content: center;
 
- 
 } 
 .mantine-1snbilv {
     height: 100px;
     width: 100px;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     
 }    
 .landingCon{

@@ -20,18 +20,24 @@ const Profil =()=>{
         }
         sendReq()
     },[])
-
+    
     return(
         <>
-            <Hero
-                titel={user.length > 0 ? user[0].name : undefined }
-                text={user.length > 0 ? user[0].description : undefined}
-            />
-            {user.length > 0 ? <RenderUserCard user={user} />: undefined }
+        <div className='proInfo' style={{display:'flex', flexDirection:'row', justifyContent:'space-around ', width:'60%', padding:'50px 60px', flexWrap:'wrap'}} >
 
+            <Hero
+                            titel={user.length > 0 ? user[0].name : undefined }
+                            text={user.length > 0 ? user[0].description : undefined}
+                        />
+                        {user.length > 0 ? <RenderUserCard user={user} />: undefined }
+
+        </div>
+            
+          
             <div className='tagCon' >            
-              {connectedTags.length > 0 ? <Tags tags={connectedTags} /> : undefined}
+             {connectedTags.length > 0 ? <Tags tags={connectedTags}  /> : undefined}
             </div>
+             
     
         </>
 

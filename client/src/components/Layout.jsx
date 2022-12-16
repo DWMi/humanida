@@ -6,7 +6,7 @@ const Layout = () => {
   return (
     <div
       className="container"
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingBottom:'100px'}}
     >
       <Header />
       <ContentContainer />

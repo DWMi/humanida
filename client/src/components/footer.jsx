@@ -7,7 +7,6 @@ export default function Footer() {
       <div
         className="text-center p-4"
         style={{
-          backgroundColor: "rgba(0, 0, 0, 0.05)",
           display: "flex",
           alignItems: "center",
           justifyContent: "space-evenly",
