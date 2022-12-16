@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router"
 import Kompetens from "./Kompetens"
 import Startsida from "./Startsida"
-
+import KontaktSida from "./KontaktSida"
 
 const ContentContainer =()=>{
 
@@ -21,7 +21,7 @@ const ContentContainer =()=>{
             />
             <Route
                 path="/kontakt"
-                element={<h1> Kontakta oss </h1>}
+                element={< KontaktSida />}
             />
             <Route
                 path="/min-sida/:id"

@@ -32,9 +32,6 @@ const RenderUserCard = (props) => {
         ) 
         })}
 
-        
-
-
 
         </>
     )
