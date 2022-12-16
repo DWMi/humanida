@@ -1,6 +1,7 @@
 import "./styles/kompetens.css";
 import { Avatar, Card } from "@mantine/core";
 const RenderUserCard = (props) => {
+
   return (
     <>
       {props.user.map((user) => {
@@ -26,3 +27,4 @@ const RenderUserCard = (props) => {
   );
 };
 export default RenderUserCard;
+
