@@ -1,4 +1,4 @@
-import { freeQuery, getAll } from "../database/db.js";
+import { freeQuery, getAll, selectFrom } from "../database/db.js";
 
 export const getAllTags = async (req, res) => {
   try {
@@ -9,10 +9,19 @@ export const getAllTags = async (req, res) => {
   }
 };
 
+export const getById = async (req, res) => {
+  try {
+    const tag = await selectFrom("tag", "ID", req.query.id);
+    res.status(200).json(tag);
+  } catch (err) {
+    res.status(500);
+  }
+};
+
 export const getUsers = async (req, res) => {
   try {
     const users = await freeQuery(
-      `SELECT user.name, user.ID FROM user_tag INNER JOIN user ON user.ID = user_tag.user_ID AND user_tag.tag_ID = ${req.query.id}`
+      `SELECT user.name, user.ID, user.email FROM user_tag INNER JOIN user ON user.ID = user_tag.user_ID AND user_tag.tag_ID = ${req.query.id}`
     );
     res.status(200).json(users);
   } catch (err) {

@@ -27,13 +27,36 @@ Content-Type: application/json
 
 GET http://localhost:3000/api/user/logout
 
+
+### Get logged in user
+
+GET http://localhost:3000/api/user/validate
+
 ### Get all tags
 
 GET http://localhost:3000/api/tag/getall
 
+### Get tag by ID
+
+GET http://localhost:3000/api/tag/getbyid?id=1
+
 ### Get users connected to tags
 
 GET http://localhost:3000/api/tag/getusers?id=1
+
+### Add tag to user
+
+POST http://localhost:3000/api/user/addtag
+Content-Type: application/json
+
+{
+  "user_ID": "1",
+  "tag_ID": "2"
+}
+
+### Get tags connected to user
+
+GET http://localhost:3000/api/user/gettags?id=1
 
 
 ### Get tags not connected to user

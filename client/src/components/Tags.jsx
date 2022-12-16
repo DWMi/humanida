@@ -7,11 +7,13 @@ const Tags =(props)=>{
 
         props.tags.map((tag)=>{
         return(
-        
-            <div className="tagBox">
-                {tag.name}
-            </div>
-            
+            <>
+            <a href={`/kompetens/${tag.ID}`} style={{textDecoration:'none'}}>
+                <div className="tagBox">
+                    {tag.name}
+                </div>
+            </a>
+            </>
         )
         })
 
