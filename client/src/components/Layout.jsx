@@ -3,15 +3,18 @@ import Footer from "./footer";
 import Header from "./Header";
 
 const Layout = () => {
-  return (
+  return ( 
+
+    <>
+      <Header />
     <div
       className="container"
-      style={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      style={{ display: "flex", flexDirection: "column", alignItems: "center", paddingBottom:'100px'}}
     >
-      <Header />
       <ContentContainer />
       <Footer />
     </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router";
 import Kompetens from "./Kompetens";
-// import Profil from "./Profil";
+import Profil from "./Profil";
 import Startsida from "./Startsida";
 import KontaktSida from "./KontaktSida"
 import Login from './Login';

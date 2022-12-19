@@ -27,14 +27,31 @@ const Kompetens = () => {
 
   return (
     <>
-      <Hero titel={title.length > 0 ? title[0].name : undefined} text="" />
-
-      <div className="landingCon">
-        <h4>Utvecklare som matchar kompetensen:</h4>
+      {/*  */}
+      <div className="landingCon2">
         {user.length > 0 ? (
-          <RenderUserCard user={user} />
+          <>
+          <div className="heroCon" style={{flexDirection:'column'}}>
+          <Hero titel={title.length > 0 ? title[0].name : undefined} text="Utvecklare som matchar kompetensen:" />
+       </div>
+          <div className="cardCon">
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+            <RenderUserCard user={user} />
+          </div>
+          </>
         ) : (
-          <p>Hittade inga personer som matchade kompetensen</p>
+          <Hero titel="" text="Hittade inga personer som matchade kompetensen" />
+         
         )}
       </div>
     </>

@@ -17,18 +17,20 @@ const Startsida =()=>{
 
     return(
 
-        <>
-            <Hero
-                titel='Hitta utvecklare efter kompetens'
-                text='Här hittar du enkelt utvecklare efter den kompetens som du söker.'
-            />
-            <div className="ladningCon">
-            <h3 style={{display:'flex', alignItems:'start', textAlign:'start' , width:'100%', padding:'30px 0px'}}> Kompetenser: </h3>
-                <div className='tagCon'>
-                    {tags ? <Tags tags={tags}/> : undefined}
+        <>  
+            <div className='heroCon'>
+                <Hero
+                    titel='Hitta utvecklare efter kompetens'
+                    text='Här hittar du enkelt utvecklare efter den kompetens som du söker.'
+                />
+             </div>    
+                <div className="ladningCon">
+                <h3 style={{display:'flex', alignItems:'start', textAlign:'start' , width:'100%', padding:'30px 0px'}}> Kompetenser: </h3>
+                    <div className='tagCon'>
+                        {tags ? <Tags tags={tags}/> : undefined}
+                    </div>
                 </div>
-            </div>
-            
+           
         </>
     )
 }

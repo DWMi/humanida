@@ -42,23 +42,27 @@ const Minsida = () => {
       <div className="minContainer">
         <div className="selectContainer">
         <h3>Lägg till kompetens: </h3>
-          <select
-            onChange={(event) => {
-              setSelectedTags(event.target.value);
-            }}
-            id="framework"
-          >
-            {notConnectedTags.length > 0
-              ? notConnectedTags.map((tag) => {
-                  return (
-                    <option key={tag.ID} value={tag.ID}>
-                      {tag.name}
-                    </option>
-                  );
-                })
-              : undefined}
-          </select>
-          <button onClick={saveTag}>Lägg till kompetens</button>
+          <div className="selectBox">
+            <select
+              onChange={(event) => {
+                setSelectedTags(event.target.value);
+              }}
+              id="framework"
+            >
+              {notConnectedTags.length > 0
+                ? notConnectedTags.map((tag) => {
+                    return (
+                      <option key={tag.ID} value={tag.ID}>
+                        {tag.name}
+                      </option>
+                    );
+                  })
+                : undefined}
+            </select>
+            <button onClick={saveTag}
+            style={{padding:'10px'}}
+            >Lägg till</button>
+          </div>  
         </div>
         <div className="tagContainer">
           {connectedTags.length > 0 ? <Tags tags={connectedTags} /> : undefined}
