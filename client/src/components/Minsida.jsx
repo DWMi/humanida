@@ -1,47 +1,53 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { makeRequest } from "../functions/makeRequest";
 import Hero from "./Hero";
 import Tags from "./Tags";
 import "./styles/minsida.css";
 import { useParams } from "react-router-dom";
 import RenderUserCard from "./RenderUserCard";
-
-
+import { userContext } from "../context/userProvider";
 
 const Minsida = () => {
   const [notConnectedTags, setNotConnectedTags] = useState([]);
   const [connectedTags, setConnectedTags] = useState([]);
   const [selectedTag, setSelectedTags] = useState(undefined);
-  const params = useParams()
-  useEffect(() => {
-      const sendReq = async () => {
-          const responseOne = await makeRequest(`/api/tag/getnotconnected?id=${params.id}`, "GET");
-          setNotConnectedTags(responseOne);
-          const responseTwo = await makeRequest(`/api/user/gettags?id=${params.id}`, "GET");
-          setConnectedTags(responseTwo);
+  const { getUser } = useContext(userContext);
 
+  const params = useParams();
+  useEffect(() => {
+    const sendReq = async () => {
+      const responseOne = await makeRequest(
+        `/api/tag/getnotconnected?id=${params.id}`,
+        "GET"
+      );
+      setNotConnectedTags(responseOne);
+      const responseTwo = await makeRequest(
+        `/api/user/gettags?id=${params.id}`,
+        "GET"
+      );
+      setConnectedTags(responseTwo);
     };
     sendReq();
   }, []);
-  const saveTag=async()=>{
-    if (selectedTag){
-        console.log("hej")
-        const body = JSON.stringify({
-            user_ID: params.id,
-            tag_ID: selectedTag
-        })
-        const response = await makeRequest(`/api/user/addtag`, "POST", body)
-        if (response === "Taggen är tillagd på användaren"){
-            location.reload()
-        }
+  const saveTag = async () => {
+    if (selectedTag) {
+      const body = JSON.stringify({
+        user_ID: params.id,
+        tag_ID: selectedTag,
+      });
+      const response = await makeRequest(`/api/user/addtag`, "POST", body);
+      if (response === "Taggen är tillagd på användaren") {
+        location.reload();
+      }
     }
-  }
-  console.log(selectedTag)
+  };
+  console.log(selectedTag);
   return (
     <>
       <div className="minContainer">
         <div className="selectContainer">
-        <h3>Lägg till kompetens: </h3>
+          <h2>{getUser ? getUser.name : undefined}</h2>
+          <h3>Lägg till kompetens: </h3>
           <div className="selectBox">
             <select
               onChange={(event) => {
@@ -59,10 +65,10 @@ const Minsida = () => {
                   })
                 : undefined}
             </select>
-            <button onClick={saveTag}
-            style={{padding:'10px'}}
-            >Lägg till</button>
-          </div>  
+            <button onClick={saveTag} style={{ padding: "10px" }}>
+              Lägg till
+            </button>
+          </div>
         </div>
         <div className="tagContainer">
           {connectedTags.length > 0 ? <Tags tags={connectedTags} /> : undefined}
