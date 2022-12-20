@@ -1,13 +1,17 @@
-.heroCon{
-    display:flex;
-    width: 100%;
-    justify-content: start;
+.heroCon {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 40px 40px 40px 50px;
 }
-.textCon{
-    
-    display: flex;
-    justify-content: start;
-    flex-direction: column;
-    align-items: start;
-    padding:40px 20px 40px 50px;
+.textCon {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: start;
+  min-width: 300px;
+  max-width: 500px;
 }
