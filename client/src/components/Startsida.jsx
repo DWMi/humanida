@@ -3,6 +3,7 @@ import { makeRequest } from "../functions/makeRequest";
 import Hero from "./Hero";
 import Tags from "./Tags";
 import "./styles/landing.css";
+import { HiBriefcase, HiOutlineBriefcase } from "react-icons/hi2";
 
 const Startsida = () => {
   const [tags, setTags] = useState([]);
@@ -16,22 +17,25 @@ const Startsida = () => {
 
   return (
     <>
-      <div className="heroCon">
-        <Hero
-          titel="Hitta utvecklare efter kompetens"
-          text="Här hittar du enkelt utvecklare efter den kompetens som du söker."
-        />
-        <a
-          href="/kontakt"
-          style={{
-            paddingLeft: "60px",
-            fontSize: "22px",
-            color: "black",
-            cursor: "pointer",
-          }}
-        >
-          Kontakta oss
-        </a>
+      <div className="topCon">
+        <div className="startHeroCon">
+          <Hero
+            titel="Hitta utvecklare efter kompetens"
+            text="Här hittar du enkelt utvecklare efter den kompetens som du söker."
+            animate={true}
+          />
+          <a
+            href="/kontakt"
+            style={{
+              paddingLeft: "60px",
+              fontSize: "22px",
+              color: "black",
+              cursor: "pointer",
+            }}
+          >
+            Kontakta oss
+          </a>
+        </div>
       </div>
       <div className="ladningCon">
         <h3

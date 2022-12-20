@@ -15,7 +15,31 @@
   max-width: 56;
 }
 
-.heroCon {
+.startHeroCon {
   display: flex;
   flex-direction: column;
+}
+
+.topCon {
+  display: "flex";
+  width: 100%;
+}
+
+#icon {
+  -webkit-animation: spin 4s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    color: #294f6d;
+  }
+  50% {
+    -webkit-transform: rotate(180deg);
+    color: black;
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    color: #294f6d;
+  }
 }
