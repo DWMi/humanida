@@ -31,12 +31,10 @@ const Kompetens = () => {
       <div className="landingCon2">
         {user.length > 0 ? (
           <>
-            <div className="heroCon" style={{ flexDirection: "column" }}>
-              <Hero
-                titel={title.length > 0 ? title[0].name : undefined}
-                text="Utvecklare som matchar kompetensen:"
-              />
-            </div>
+            <Hero
+              titel={title.length > 0 ? title[0].name : undefined}
+              text="Utvecklare som matchar kompetensen:"
+            />
             <div className="cardCon">
               <RenderUserCard user={user} />
             </div>

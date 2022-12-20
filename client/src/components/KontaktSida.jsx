@@ -118,7 +118,7 @@ const KontaktSida = () => {
                 "https://www.google.com/maps/embed?pb=!4v1671528141055!6m8!1m7!1soZ1QNu1oRP5QCxzV-Boq0Q!2m2!1d57.71006177187587!2d11.99434361302648!3f169.9!4f0!5f0.7820865974627469"
               }
               width="350"
-              height="250"
+              height="350"
               style={{ border: 0 }}
               allowFullScreen=""
               loading="lazy"
