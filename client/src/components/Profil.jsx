@@ -23,7 +23,8 @@ const Profil =()=>{
     
     return(
         <>
-        <div className='proInfo' style={{display:'flex', flexDirection:'row', justifyContent:'space-around ', width:'60%', padding:'50px 60px', flexWrap:'wrap'}} >
+        
+        <div className='proInfo' style={{display:'flex', flexDirection:'row', justifyContent:'space-evenly ', width:'100%', padding:'50px 60px', flexWrap:'wrap'}} >
 
             <Hero
                             titel={user.length > 0 ? user[0].name : undefined }

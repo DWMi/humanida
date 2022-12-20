@@ -1,14 +1,11 @@
 .contactForm{
-    display:-webkit-flex;
-    display:-moz-flex;
-    display:-ms-flex;
     display:flex;
-    -webkit-flex-direction:row;
     flex-direction:row;
-    -webkit-justify-content:center;
     justify-content:center;
-    gap: 1%;
-
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10%;
+    
 }
 
 
