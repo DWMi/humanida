@@ -55,6 +55,7 @@ const Minsida = () => {
               }}
               id="framework"
             >
+              <option value="">Välj Ramverk</option>
               {notConnectedTags.length > 0
                 ? notConnectedTags.map((tag) => {
                     return (

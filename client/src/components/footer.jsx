@@ -10,7 +10,7 @@ export default function Footer() {
         style={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-evenly",
+          justifyContent: "space-around",
         }}
       >
         <div>
